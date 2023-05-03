@@ -9,7 +9,7 @@ contract Variables {
         stateVar = 20; // using the state variable
     }
 
-    function localvariable() external {
+    function localvariable() external pure {
         uint256 localVar = 50; //local variable
         bool M = true; //local variable
     }
@@ -35,7 +35,7 @@ contract GlobalVariablesDemo {
     address public contractAddress;
     uint256 public contractBalance;
 
-    constructor() {
+    constructor() payable {
         // Get current block data
         currentBlockNumber = block.number;
         currentBlockTimestamp = block.timestamp;
@@ -44,6 +44,7 @@ contract GlobalVariablesDemo {
         // Get transaction data
         transactionSender = msg.sender;
         transactionValue = msg.value;
+        // "msg.value" and "callvalue()" can only be used in payable constructors. Make the constructor "payable" to avoid error.
 
         // Get message data
         messageSender = tx.origin;
@@ -58,3 +59,4 @@ contract GlobalVariablesDemo {
     receive() external payable {
         contractBalance = address(this).balance;
     }
+}
