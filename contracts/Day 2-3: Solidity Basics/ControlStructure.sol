@@ -41,16 +41,16 @@ contract ControlStructure {
         }
         // while loop
         uint A = 0;
-        while (while A < 10) {
+        while ( A < 10) {
             // code
-            j++;
+            A++;
         }
     }
 
     function add(uint b) external pure returns (uint) {
         uint y;
-        for (i = 0; i <= b; i++;) {
-            y += i;
+        for (b = 0; b <= b; b++) {
+            y += b;
         }
         return y;
     }
