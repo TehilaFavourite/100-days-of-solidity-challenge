@@ -47,6 +47,5 @@ contract Datatypes {
     }
     Person public myPerson = Person("Alice", 30);
 
-    // Contract
-    DataTypesDemo public myContract = this;
+    
 }
