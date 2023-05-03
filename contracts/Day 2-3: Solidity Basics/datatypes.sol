@@ -1,6 +1,6 @@
 pragma solidity 0.8.19;
 
-contract datatypes {
+contract Datatypes {
     // Boolean
     bool public isTrue = true;
 
@@ -22,7 +22,7 @@ contract datatypes {
     bytes public myBytes = hex"1234567890abcdef";
 
     // Fixed-point decimal
-    //  NOte: avoid using fixed-point numbers
+    //  Note: avoid using fixed-point numbers
     fixed public fixedNumber = 1.5;
     ufixed public ufixedNumber = 0.123;
 
