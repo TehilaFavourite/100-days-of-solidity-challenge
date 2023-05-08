@@ -1,5 +1,26 @@
+// Basic function
+pragma solidity 0.8.19;
+
+contract MyContract {
+    uint public myNumber;
+    
+    function setNumber(uint _number) public {
+        myNumber = _number;
+    }
+}
+
+// another basic function
+pragma solidity 0.8.19;
+
+contract Function {
+    
+    function add (uint _a, uint _b) external pure returns(uint) {
+        return _a + _b;
+    }
+}
+
 // Function visibility
-pragma solidity ^0.8.0;
+pragma solidity 0.8.19;
 
 contract FunctionVisibility {
 
@@ -24,7 +45,7 @@ contract FunctionVisibility {
 
 // pure and view function
 
-pragma solidity ^0.8.0;
+pragma solidity 0.8.19;
 
 contract Function {
     uint public myNumber;
