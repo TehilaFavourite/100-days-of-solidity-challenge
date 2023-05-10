@@ -64,7 +64,7 @@ contract Function {
 // function modifier
 pragma solidity 0.8.19;
 
-contract MyContract {
+contract myModifier {
     address public owner;
     uint public myNumber;
 
