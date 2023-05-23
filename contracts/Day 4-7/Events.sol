@@ -9,6 +9,7 @@ contract EventExample {
 
     function updateValue(uint256 _newValue) public {
         value = _newValue;
+        
         emit NewValue(_newValue);
     }
 }
