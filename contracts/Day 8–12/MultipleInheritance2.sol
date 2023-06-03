@@ -57,3 +57,4 @@ contract PriceFeed is Owned, Destructible, Named("GoldFeed") {
 
     uint info;
 }
+
