@@ -8,6 +8,7 @@ contract SeniorDevA {
     }
 }
 
+
 contract SeniorDevB {
     function testingSmartContracts() public pure returns (string memory) {
         return "I can teach smart contract testing!";
