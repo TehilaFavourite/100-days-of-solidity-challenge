@@ -1,3 +1,7 @@
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.7.0 <0.9.0;
+
 library StringUtils {
     function concatenate(string memory a, string memory b) internal pure returns (string memory) {
         return string(abi.encodePacked(a, b));
@@ -9,11 +13,10 @@ library StringUtils {
 }
 
 contract MyContract {
-    using StringUtils for string;
 
     function performStringOperations(string memory a, string memory b) public pure returns (string memory, uint256) {
-        string memory result = a.concatenate(b); // Using the concatenate() function from the StringUtils library
-        uint256 length = result.getLength(); // Using the getLength() function from the StringUtils library
+        string memory result = StringUtils.concatenate(a,b); // Using the concatenate() function from the StringUtils library
+        uint256 length = StringUtils.getLength(result); // Using the getLength() function from the StringUtils library
         return (result, length);
     }
 }
