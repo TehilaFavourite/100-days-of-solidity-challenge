@@ -11,7 +11,9 @@ contract CallerContract {
 
     function callExternalFunction(uint256 data) public view returns (bool) {
         // Use try-catch for handling exceptions from the external call
-        try TargetContract(targetContract).processData(data) returns (bool success) {
+        try TargetContract(targetContract).processData(data) returns (
+            bool success
+        ) {
             // Handle the successful external call
             return success;
         } catch Error(string memory errorMessage) {
