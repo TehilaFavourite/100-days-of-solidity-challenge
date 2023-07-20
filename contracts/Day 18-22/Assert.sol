@@ -12,3 +12,7 @@ contract AssertExample {
         balance -= amount;
     }
 }
+
+
+
+
