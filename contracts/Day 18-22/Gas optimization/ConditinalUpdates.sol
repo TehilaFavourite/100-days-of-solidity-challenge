@@ -13,6 +13,7 @@ contract BadConditionalUpdate {
 // Good approach: Conditionally update state
 contract GoodConditionalUpdate {
     uint256 public counter;
+    address public owner;
 
     function incrementCounter() public {
         if (msg.sender == owner) {
